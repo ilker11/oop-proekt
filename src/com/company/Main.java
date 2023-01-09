@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-	// write your code here
+        // write your code here
         Grammar grammar = readGrammar("/E:/grammar1.txt");
         Grammar grammar2 = readGrammar("/E:/grammar2.txt");
 
@@ -23,11 +23,11 @@ public class Main {
 
 
         // Rule newRule = new Rule("S", List.of("A", "D"));
-       // grammar.addRule(newRule);
+        // grammar.addRule(newRule);
 
-       // grammar.removeRule(5);
+        // grammar.removeRule(5);
 
-       // grammar2.save("/E:/grammar4.txt");
+        // grammar2.save("/E:/grammar4.txt");
 
         List<String> symbols = List.of("A", "B");
         List<String> expected = List.of("a", "A", "b", "B");
@@ -42,8 +42,8 @@ public class Main {
         System.out.println(isInLanguage ? "Word is in language" : "Word is not in language");
 
 
-      //  boolean isChomsky = GrammarChomsky.isChomsky(grammar);
-      //  System.out.println(isChomsky ? "Grammar is in Chomsky normal form" : "Grammar is not in Chomsky normal form");
+        //  boolean isChomsky = GrammarChomsky.isChomsky(grammar);
+        //  System.out.println(isChomsky ? "Grammar is in Chomsky normal form" : "Grammar is not in Chomsky normal form");
 
 
 
@@ -93,7 +93,7 @@ public class Main {
             }
             String[] parts = line.split("->");
             String lhs = parts[0].trim();
-            List<String> rhs = parseList(parts[1]);
+            List<String> rhs = parseList(parts[0]);
             rules.add(new Rule(lhs, rhs));
         }
         return rules;
